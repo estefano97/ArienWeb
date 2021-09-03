@@ -1,0 +1,760 @@
+*{
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --violet: #B646C4;
+    --violet-dark: #7B599D;
+    --gold: #F1B047;
+    --cyan: #71A4B7;
+    --second-color: #292F33;
+    scroll-behavior: smooth;
+}
+html{box-sizing: border-box;overflow-x: hidden; margin:0;}
+body{box-sizing: border-box;overflow-x: hidden;}
+
+/****************************************HEADER****************************************/
+header{
+    background-color: transparent;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 600;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    transition: .5s;
+    z-index: 1000;
+}
+
+.header-arien{
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.header-arien > img {
+    width: 2rem;
+    margin: 0 .25rem;
+}
+
+.navigation{
+    list-style: none;
+    font-size: .25rem;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.navigation a{
+    color: white;
+    margin: 0 1rem;
+    transition: .25s;
+}
+
+.navigation a:hover{
+    color: var(--gold) !important;
+}
+
+.foco a{
+    color: var(--cyan);
+}
+
+.social-media{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media > *{
+    margin: 10px;
+    width: 2.5rem;
+}
+
+/**********DESPEGABLE**********/
+.hamburger{
+    z-index: 1200;
+    position: fixed;
+    bottom: 1vh;
+    right: 1vw;
+    background-color: var(--violet);
+    border-radius: 3rem;
+}
+
+.hamburger-box{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.hamburger{
+    display: none;
+}
+
+/****************************************MAIN****************************************/
+
+/**********PANTALLA PRINCIPAL DEL MAIN**********/
+.mainBackground{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 90%;
+    background-image: url(../assets/background.webp);
+    background-size:cover;
+    background-attachment: fixed;
+    z-index: -100;
+}
+
+.sombra{
+    background-image: radial-gradient(circle at -4.17% 4.55%, #80178a 0, #540a70 25%, #270050 50%, #070031 75%, #000019 100%);
+    filter: opacity(.8);
+    height: 90%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -90;
+}
+
+.wave > *{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+}
+
+.header-text{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.5rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-left: 100vw;
+    margin-top: 7vh;
+}
+
+.header-text > ul {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 -.5rem;
+    list-style: none;
+}
+
+.header-text > ul > * {
+    margin-top: .75rem;
+}
+
+.header-text h1:hover{
+    transition: .25s;
+    color: var(--gold);
+}
+
+.header-text li:hover{
+    transition: .25s;
+    color: var(--gold);
+}
+
+.mainText{
+   height: 40vh;
+}
+
+/**********QUIENES SOMOS**********/
+.sobre-nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding: 0 0 10rem 0;
+}
+
+.sobre-nosotros img{
+    width: 20%;
+    border-radius: 10rem;
+}
+
+.sobre-nosotros h2{
+    font-size: 4rem;
+}
+
+.sobre-nosotros p{
+    font-size: 2rem;
+}
+
+.sobre-nosotros b{
+    color: var(--gold);
+}
+
+/**********SERVICIOS**********/
+.title-main{
+    font-size: 4rem;
+    text-align: center;
+    margin: 3vh 0 7vh 0;
+}
+
+.products{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.products > section{
+    background-color: rgb(246, 246, 246);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    width: 25rem;
+    height: 50rem;
+    margin: 1rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+.products > section > img{
+    width: 800px;
+    border-radius: 2rem 2rem 0 0;
+    height: 250px;
+}
+
+.products h3{
+    font-size: 2rem;
+}
+
+.products > section > ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0  .5rem;
+    align-items: center;
+}
+
+.products > section > ul > li{
+    margin: .5rem 0;
+}
+
+.products > section h4{
+    margin: 1rem;
+    font-size: 2.5rem;
+}
+
+.products > section > h4 > b{
+    color: var(--violet-dark);
+}
+
+.products button {
+    background-color: var(--gold);
+    padding: .5rem;
+    font-weight: bold;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.products button a{
+    color: var(--second-color);
+}
+
+
+
+/****************************************FOOTER****************************************/
+footer{
+    background-color: var(--second-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+footer > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3rem;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+}
+
+footer h3{
+    margin-bottom: 0;
+}
+
+footer li{
+    color: rgba(255, 255, 255, .5);
+    margin-top: .5rem;
+}
+
+footer a{
+    color: rgba(241, 176, 71, .5);
+    font-weight: bold;
+}
+
+/****************************************CONTACTOS****************************************/
+
+
+.backgroundContacto{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 90%;
+    background-image: url(../assets/backgroundContacto.webp);
+    background-size:cover;
+    background-attachment: fixed;
+    z-index: -100;
+}
+
+.header-contacto{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    margin-bottom: 14rem;
+    text-align: left;
+    margin-left: 100vw;
+}
+
+.header-contacto ul{
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.header-contacto li{
+    margin: 0 0 1.5rem;
+}
+
+.header-contacto h1{
+    margin-bottom: 2rem;
+    font-size: 5rem;
+    font-weight: 900;
+    margin-left: 2rem;
+}
+
+.header-contacto-whatsapp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12vw;
+    margin-top: 1rem;
+    width: 15rem;
+    background-color: #64B161;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 1.5rem;
+    color: white;
+    transition: .5s;
+}
+
+.header-contacto-whatsapp img{
+    width: 20%;
+    margin-right: 1rem;
+}
+
+.header-contacto-whatsapp:hover{
+background-color: white;
+color: #64B161;
+}
+
+.form-contacto h2{
+    text-align: center;
+    font-size: 3rem;
+}
+
+/**********REDES SOCIALES**********/
+
+.title-social-contacto{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.social-contacto{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 10rem;
+}
+
+.social-contacto article{
+    padding: 1rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.social-contacto img{
+    border-radius: 2rem;
+    width: 7.5rem;
+}
+
+.social-contacto a{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--gold);
+}
+
+
+/**********FORMULARIO**********/
+.contact-form{
+    text-align: center;
+    --form-ok-color: #4caf50;
+    --form-error-color: #f44336;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-bottom: 10rem;
+}
+
+.contact-form > *{
+    padding: .5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+}
+
+.contact-form textarea{
+    resize: none;
+}
+
+.contact-form legend,
+.contact-form-response{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-form > input,
+.contact-form > textarea{
+    border: 1px solid black;
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.contact-form input[type="submit"]{
+    background-color: var(--second-color);
+    color: var(--gold);
+    font-weight: bold;
+    border-radius: 1rem;
+    border: none;
+    font-size: 2rem;
+    width: 15rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.contact-form input[type="submit"]:hover{
+    background-color: var(--gold);
+    color: var(--second-color);
+}
+
+.contact-form *::placeholder{
+    color: #222;
+}
+
+.contact-form [required]:valid{
+    border: thin solid var(--form-ok-color);
+}
+
+.contact-form [required]:invalid{
+    border: thin solid var(--form-error-color);
+}
+
+.contact-form-error{
+    text-align: center;
+    margin-top: -1rem;
+    font-size: 80%;
+    background-color: var(--form-error-color);
+    color: #fff;
+    transition: all 800ms ease;
+}
+
+.contact-form-error.is-active{
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none{
+    display: none;
+}
+
+@keyframes show-message {
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/****************************************PAGINAS****************************************/
+.backgroundPaginas{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 90%;
+    background-image: url(../assets/backgroundPaginas.webp);
+    background-size:cover;
+    background-attachment: fixed;
+    z-index: -100;
+}
+.header-paginas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 5rem;
+    margin-bottom: 25rem;
+    text-align: center;
+    font-size: 2rem;
+    margin-left: 100vw;
+}
+
+.paginas-ofertas{
+    margin: auto;
+    width: 80%;
+    font-size: 3rem;
+}
+
+.paginas-ofertas > section{
+    text-align: center;
+    background-color: var(--second-color);
+    color: white;
+    margin: 5rem 0;
+    padding: 1rem;
+    border-radius: 5rem;
+}
+
+.paginas-ofertas b{
+    color: var(--gold);
+}
+
+.paginas-ofertas img{
+    width: 50vw;
+    border-radius: 5rem;
+    border: 5px solid var(--gold);
+    margin: 2rem 0;
+    transition: .5s;
+}
+
+.paginas-ofertas img:hover{
+    filter: opacity(.4);
+}
+
+.paginas-ofertas > section > h3{
+    font-size: 1.75rem;
+}
+
+.paginas-ofertas > section > p{
+    font-size: 1.25rem;
+}
+
+
+/****************************************RESPONSIVE****************************************/
+
+@media screen and (max-width:780px) {
+    .navigation{
+        padding-left: 0;
+    }
+    
+    .header-text{
+        margin-top: 1vh;
+        width: 95%;
+    }
+    
+    .header-arien{
+        display: none;
+    }
+    
+    .sobre-nosotros img{
+        width: 40%;
+        border-radius: 100%;
+    }
+    
+    .paginas-ofertas{
+        font-size: 1.5rem;
+    }
+
+    .paginas-ofertas > section > h3{
+        font-size: 1rem;
+    }
+    
+    .paginas-ofertas > section > p{
+        font-size: .75rem;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .social-media{
+        display: none;
+    }
+    
+    header{
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .header-text{
+        font-size: 2rem;
+    }
+    
+    .header-text > ul{
+        font-size: 1.5rem;
+    }
+    .sobre-nosotros img{
+        width: 60%;
+        border-radius: 100%;
+    }
+
+    .header-contacto h1{
+        font-size: 4rem;
+    }
+
+    .header-contacto ul{
+        font-size: 1.5rem;
+    }
+
+    .header-contacto{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    header{
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        color: var(--second-color);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        margin-left: 200vh;
+    }
+    
+    .hamburger{
+        display: block;
+    }
+    
+    .navigation a{
+        color: var(--second-color);
+        font-size: 3rem;
+        box-shadow: var(--second-color) 0 1px 0;
+    }
+    
+    .foco a{
+        color: var(--cyan);
+    }
+    
+    .social-media{
+        display: none;
+    }
+    
+    .header-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    .header-text ul{
+        margin-left: -2rem;
+        font-size: 1rem;
+    }
+    
+    .navigation{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .navigation > * {
+        margin-bottom: 1rem;
+    }
+    
+    .header-text li{
+        font-size: 1.5rem;
+        padding: 1.5rem 0;
+    }
+    
+    .header-text{
+        margin-bottom: 10vh;
+    }
+
+    .header-contacto h1{
+        font-size: 12vw;
+    }
+
+    .header-contacto ul{
+        font-size: 6vw;
+    }
+
+    .header-paginas{
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        width: 100%;
+        align-items: center;
+    }
+
+    .header-paginas > * {
+        width: 90%;
+    }
+
+    .header-paginas p{
+        font-size: 1.75rem;
+    }
+
+    .paginas-ofertas > section{
+        border-radius: 1rem;
+    }
+
+    .paginas-ofertas img{
+        border: 3px solid var(--gold);
+        width: 90%;
+        border-radius: 1rem;
+    }
+ 
+    .backgroundContacto{
+        background-image: url(../assets/MovilBg.webp);
+    }
+
+    .backgroundPaginas{
+        background-image: url(../assets/MovilBg.webp);
+    }
+
+    .mainBackground{
+        background-image: url(../assets/MovilBg.webp);
+    }
+}
+
+/**********EFECTOS**********/
+.productsShadow{
+    box-shadow: black 1px 1px 30px -15px;
+}
+
+.transition1{
+    transition: .75s;
+}
